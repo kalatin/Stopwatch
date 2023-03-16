@@ -113,29 +113,63 @@ body {
   margin-top: 12px;
 }
 .timer__buttons {
-  display: flex;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
   justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 .timer__button {
-  padding: 8px 31px;
+  padding: 8px 0;
   border-radius: 3px;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
 }
-.timer__button:nth-child(1) {
+.timer__button.start {
   background: #03ae85;
   border: 1px solid #03ae85;
 }
-.timer__button:nth-child(2) {
+.timer__button.pause {
   background: rgba(255, 255, 255, 0);
   border: 1px solid #d1d1d1;
 }
-.timer__button:nth-child(3) {
+.timer__button.reset {
   background: #fd6259;
   border: 1px solid #fd6259;
+}
+.timer__button.lap {
+  background: #e0c423;
+  border: 1px solid #e0c423;
+}
+.timer__laps {
+  max-width: 300px;
+  margin: 20px auto;
+  border-radius: 4px;
+  background: #011c2c;
+  padding: 20px 21px;
+  padding-bottom: 7px;
+}
+.timer__head {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 10px;
+}
+.timer__head-time {
+  text-align: right;
+}
+.timer__lap {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.timer__lap-num {
+  margin-left: 10px;
+}
+.timer__lap-time {
+  margin-right: 10px;
 }
 
 @media (max-width: 500px) {
