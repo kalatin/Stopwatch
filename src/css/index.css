@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/*			Обнуление			*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  background: #01131e;
+  padding: 50px 10px;
+  font-family: "Roboto mono";
+  color: #ffffff;
+}
+
+.timer__container {
+  max-width: 431px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background: #011c2c;
+  padding: 0 21px;
+  padding-top: 18px;
+  padding-bottom: 35px;
+  border-bottom: 8px solid #fd6259;
+  display: flex;
+  flex-direction: column;
+  row-gap: 37px;
+  text-align: center;
+}
+.timer__heading {
+  font-size: 22px;
+  line-height: 29px;
+}
+.timer__numbers {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.timer__number-count {
+  padding: 0 27px;
+  font-size: 45px;
+  line-height: 59px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+}
+.timer__number-description {
+  margin-top: 12px;
+}
+.timer__buttons {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  justify-content: center;
+}
+.timer__button {
+  padding: 8px 31px;
+  border-radius: 3px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.timer__button:nth-child(1) {
+  background: #03ae85;
+  border: 1px solid #03ae85;
+}
+.timer__button:nth-child(2) {
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #d1d1d1;
+}
+.timer__button:nth-child(3) {
+  background: #fd6259;
+  border: 1px solid #fd6259;
+}
+
+@media (max-width: 500px) {
+  .timer__number-count {
+    padding: 0 15px;
+  }
+  .timer__button {
+    padding: 8px 15px;
+  }
+}

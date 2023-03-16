@@ -1,0 +1,88 @@
+@import './common';
+
+body {
+	background: #01131e;
+	padding: 50px 10px;
+	font-family: 'Roboto mono';
+	color: #ffffff;
+}
+
+.timer {
+	&__container {
+		max-width: 431px;
+		margin: 0 auto;
+		border-radius: 4px;
+		background: #011c2c;
+		padding: 0 21px;
+		padding-top: 18px;
+		padding-bottom: 35px;
+		border-bottom: 8px solid #fd6259;
+		display: flex;
+		flex-direction: column;
+		row-gap: 37px;
+		text-align: center;
+	}
+
+	&__heading {
+		font-size: 22px;
+		line-height: 29px;
+	}
+
+	&__numbers {
+		display: flex;
+		justify-content: center;
+		column-gap: 30px;
+	}
+
+	&__number {
+	}
+
+	&__number-count {
+		padding: 0 27px;
+		font-size: 45px;
+		line-height: 59px;
+		border: 1px solid #dbdbdb;
+		border-radius: 4px;
+	}
+
+	&__number-description {
+		margin-top: 12px;
+	}
+
+	&__buttons {
+		display: flex;
+		column-gap: 15px;
+		justify-content: center;
+	}
+
+	&__button {
+		padding: 8px 31px;
+		border-radius: 3px;
+		font-size: 18px;
+		line-height: 24px;
+		color: #ffffff;
+	}
+	&__button:nth-child(1) {
+		background: #03ae85;
+		border: 1px solid #03ae85;
+	}
+	&__button:nth-child(2) {
+		background: #ffffff00;
+		border: 1px solid #d1d1d1;
+	}
+	&__button:nth-child(3) {
+		background: #fd6259;
+		border: 1px solid #fd6259;
+	}
+}
+
+@media (max-width: 500px) {
+	.timer {
+		&__number-count {
+			padding: 0 15px;
+		}
+		&__button {
+			padding: 8px 15px;
+		}
+	}
+}
