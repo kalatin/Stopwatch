@@ -63,8 +63,10 @@ document.addEventListener('click', e => {
 		document.querySelectorAll('.timer__lap').forEach(item => {
 			item.remove();
 		});
+		document.querySelector('.timer__laps').style.display = 'none';
 	} else if (e.target.closest('.lap')) {
 		if (document.querySelector('.pause')) {
+			document.querySelector('.timer__laps').style.display = 'block';
 			let hours = ex1Timer.hoursElem.textContent;
 			let minutes = ex1Timer.minutesElem.textContent;
 			let seconds = ex1Timer.secondsElem.textContent;
