@@ -1,4 +1,4 @@
-let laps = [];
+import declOfNum from './declOfNum.js';
 
 class Timer {
 	constructor(secondsElem, minutesElem, hoursElem) {
@@ -14,13 +14,28 @@ class Timer {
 		if (this.milliseconds > 99) {
 			this.milliseconds = 0;
 			this.secondsElem.textContent = String(+this.secondsElem.textContent + 1).padStart(2, '0');
+			this.secondsElem.nextElementSibling.textContent = declOfNum(this.secondsElem.textContent, [
+				'Секунда',
+				'Секунды',
+				'Секунд',
+			]);
 		}
 		if (+this.secondsElem.textContent > 59) {
 			this.secondsElem.textContent = '00';
 			this.minutesElem.textContent = String(+this.minutesElem.textContent + 1).padStart(2, '0');
+			this.minutesElem.nextElementSibling.textContent = declOfNum(this.minutesElem.textContent, [
+				'Минута',
+				'Минуты',
+				'Минут',
+			]);
 		} else if (+this.minutesElem.textContent > 59) {
 			this.minutesElem.textContent = '00';
 			this.hoursElem.textContent = String(+this.hoursElem.textContent + 1).padStart(2, '0');
+			this.hoursElem.nextElementSibling.textContent = declOfNum(this.hoursElem.textContent, [
+				'Час',
+				'Часа',
+				'Часов',
+			]);
 		}
 	}
 
